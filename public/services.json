@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "title": "Event Planning and Coordination",
+      "price": 200,
+      "description": "Comprehensive event planning and coordination services to ensure your entertainment event runs smoothly.",
+      "image": "https://i.ibb.co/r7mMBN2/braden-collum-9-HI8-UJMSd-ZA-unsplash.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Venue Selection and Setup",
+      "price": 300,
+      "description": "Assistance in selecting the perfect venue for your event and setting it up according to your needs.",
+      "image": "https://i.ibb.co/3sYQb7z/markus-spiske-WUeh-Agq-O5h-E-unsplash.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Entertainment Booking",
+      "price": 500,
+      "description": "Booking renowned artists, musicians, comedians, or performers to elevate the entertainment value of your event.",
+      "image": "https://i.ibb.co/YTM7qgN/courtney-cook-Ss-IIw-MET0-E-unsplash.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Ticketing and Promotion",
+      "price": 400,
+      "description": "Online ticketing solutions, marketing, and promotional services to boost event attendance.",
+      "image": "https://i.ibb.co/3sYQb7z/markus-spiske-WUeh-Agq-O5h-E-unsplash.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Production and Technical Support",
+      "price": 150,
+      "description": "Providing audiovisual, lighting, and technical support for a seamless event production.",
+      "image": "https://i.ibb.co/YTM7qgN/courtney-cook-Ss-IIw-MET0-E-unsplash.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Event Marketing and Branding",
+      "price": 200,
+      "description": "Strategic event marketing and branding services to create a unique and memorable event identity.",
+      "image": "https://i.ibb.co/r7mMBN2/braden-collum-9-HI8-UJMSd-ZA-unsplash.jpg"
+    }
+  ]
+  
