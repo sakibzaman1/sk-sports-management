@@ -1,22 +1,51 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../Shared/Navbar";
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 import { BiLowVision, BiShowAlt } from "react-icons/bi";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import SweetAlert2 from "react-sweetalert2";
+import Swal from "sweetalert2"; 
+
+
 
 
 const Login = () => {
 
-    const [showPassword, setShowPassword] = useState(false)
+    const [showPassword, setShowPassword] = useState(false);
+    const [loginError, setLoginError] = useState('');
+
+
+    const { signInUser } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handeLogin = e => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
         const email = form.get("email");
         const password = form.get("password");
-        console.log(email, password)
+        console.log(email, password);
+
+        setLoginError('');
+
+        signInUser(email, password)
+            .then(() => {
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: 'Successfully Logged In',
+                    showConfirmButton: false,
+                    timer: 2500
+                  })
+                // navigate user
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(() => {
+                setLoginError("Invalid User. Please Check Email or Password Again")
+            })
     }
 
 
@@ -54,6 +83,13 @@ const Login = () => {
                                 </div>
                             </div>
                         </div>
+
+                        <div className="mx-auto mb-4 pt-4  w-full px-10 text-center">
+                            {
+                                loginError && <p className="text-red-600 italic">{loginError}</p>
+                            }
+                        </div>
+
                         <div className="form-control mt-6 pt-10 pb-10">
                             <button className="w-full bg-[#403F3F] text-white h-14 hover:scale-110 transition-transform">Login</button>
                         </div>
@@ -81,6 +117,9 @@ const Login = () => {
                 </div>
 
             </div>
+
+            <SweetAlert2 />
+
         </div>
     );
 };
