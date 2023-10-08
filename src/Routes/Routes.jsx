@@ -5,6 +5,8 @@ import "./routes.css"
 import SignUp from "../Pages/SignUp/SignUp";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Login from "../Pages/Login/Login";
+import PrivateRoute from "./PrivateRoutes/PrivateRoute";
+import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
 
 
 const routes = createBrowserRouter([
@@ -20,6 +22,11 @@ const routes = createBrowserRouter([
             },
             {
                 path: "/services",
+            },
+            {
+                path: "/servicedetails/:id",
+                element: <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
+                loader: ()=> fetch('/services.json')
             },
             {
                 path: "/signup",

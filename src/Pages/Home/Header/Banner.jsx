@@ -8,11 +8,11 @@ const Banner = () => {
             <div className="hero-overlay bg-opacity-20"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="">
-                    <h1 className="mb-10 text-3xl lg:text-7xl font-bold">SK Sports Management</h1>
+                    <h1 className="mb-10 text-3xl lg:text-7xl font-bold mt-20">SK Sports Event Management</h1>
                     
                     <div className="flex justify-center gap-4 items-center">
                     <IoArrowRedo size={40} color="black"></IoArrowRedo>
-                    <Link to="/signup"><button className="rounded-sm w-28 h-full hover:scale-110  bg-[#403F3F] hover:bg-[#403F3F] text-white font-semibold hover:text-white py-2  border-2 border-[#403F3F] hover:border-transparent  transition duration-300 ease-in-out">Sign Up</button></Link>
+                    <Link to="/signup"><button className="rounded-sm w-28 h-full hover:scale-110  bg-gradient-to-r from-gray-600 to-gray-950 hover:bg-[#403F3F] text-white font-semibold hover:text-white py-2  border-2 border-none hover:border-transparent  transition duration-300 ease-in-out">Sign Up</button></Link> 
 
                     </div>
                 </div>

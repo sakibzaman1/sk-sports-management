@@ -1,45 +1,44 @@
 [
-    {
-      "id": 1,
-      "title": "Event Planning and Coordination",
-      "price": 200,
-      "description": "Comprehensive event planning and coordination services to ensure your entertainment event runs smoothly.",
-      "image": "https://i.ibb.co/r7mMBN2/braden-collum-9-HI8-UJMSd-ZA-unsplash.jpg"
-    },
-    {
-      "id": 2,
-      "title": "Venue Selection and Setup",
-      "price": 300,
-      "description": "Assistance in selecting the perfect venue for your event and setting it up according to your needs.",
-      "image": "https://i.ibb.co/3sYQb7z/markus-spiske-WUeh-Agq-O5h-E-unsplash.jpg"
-    },
-    {
-      "id": 3,
-      "title": "Entertainment Booking",
-      "price": 500,
-      "description": "Booking renowned artists, musicians, comedians, or performers to elevate the entertainment value of your event.",
-      "image": "https://i.ibb.co/YTM7qgN/courtney-cook-Ss-IIw-MET0-E-unsplash.jpg"
-    },
-    {
-      "id": 4,
-      "title": "Ticketing and Promotion",
-      "price": 400,
-      "description": "Online ticketing solutions, marketing, and promotional services to boost event attendance.",
-      "image": "https://i.ibb.co/3sYQb7z/markus-spiske-WUeh-Agq-O5h-E-unsplash.jpg"
-    },
-    {
-      "id": 5,
-      "title": "Production and Technical Support",
-      "price": 150,
-      "description": "Providing audiovisual, lighting, and technical support for a seamless event production.",
-      "image": "https://i.ibb.co/YTM7qgN/courtney-cook-Ss-IIw-MET0-E-unsplash.jpg"
-    },
-    {
-      "id": 6,
-      "title": "Event Marketing and Branding",
-      "price": 200,
-      "description": "Strategic event marketing and branding services to create a unique and memorable event identity.",
-      "image": "https://i.ibb.co/r7mMBN2/braden-collum-9-HI8-UJMSd-ZA-unsplash.jpg"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "title": "Event Planning and Coordination",
+    "price": 200,
+    "description": "Our comprehensive event planning and coordination services are designed to ensure your entertainment event runs smoothly from start to finish. Our experienced team will work closely with you to design a customized event plan tailored to your vision and goals. We handle all logistics, from venue selection and vendor coordination to budget management and on-site supervision. With our meticulous attention to detail and commitment to excellence, you can relax and enjoy the occasion without any worries, knowing that every aspect of your event is in capable hands.",
+    "image": "https://i.ibb.co/vYVvcQB/event-planning.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Venue Selection and Setup",
+    "price": 300,
+    "description": "When it comes to venue selection and setup, we take pride in offering a comprehensive solution that goes beyond your expectations. Our experts will assist you in selecting the perfect venue that aligns with your event's theme, size, and location preferences. Once the venue is chosen, we handle all the setup details, from decor and seating arrangements to technical requirements. Our goal is to create a captivating and inviting atmosphere that leaves a lasting impression on your guests.",
+    "image": "https://i.ibb.co/FsZSwTy/venue.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Entertainment Booking",
+    "price": 500,
+    "description": "Elevate the entertainment value of your event with our professional entertainment booking services. Whether you're looking for renowned artists, musicians, comedians, or other performers, we have extensive connections in the entertainment industry to secure top talent for your event. Our team works closely with you to understand your audience's preferences and event theme, ensuring that the entertainment aligns perfectly with your vision. Get ready to leave your guests thoroughly entertained and enchanted by the incredible performances at your event.",
+    "image": "https://i.ibb.co/Z6nz8xf/entertainment.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Ticketing and Promotion",
+    "price": 400,
+    "description": "Boost your event attendance with our comprehensive ticketing and promotion services. We offer a range of ticketing solutions, including online sales and on-site ticket management. Our marketing experts create targeted campaigns to drive ticket sales and enhance your event's visibility. From email marketing and social media promotions to traditional advertising, we employ a multi-faceted approach to ensure a packed house on the big day. Let us take care of the ticketing and promotion so you can focus on delivering an unforgettable event experience.",
+    "image": "https://i.ibb.co/9bKFkqJ/ticketing.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Production and Technical Support",
+    "price": 150,
+    "description": "For a seamless event production, rely on our experienced team for production and technical support. We handle all aspects of production, from audiovisual setup to lighting design and technical coordination. Our team ensures that your event runs smoothly, and your audience is treated to a professionally executed show. Whether it's a conference, concert, or any other event, we have the expertise and equipment to make it a success.",
+    "image": "https://i.ibb.co/MNqyHSy/production.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Event Marketing and Branding",
+    "price": 200,
+    "description": "Create a unique and memorable event identity with our strategic event marketing and branding services. We work closely with you to develop a branding strategy that sets your event apart from the rest. Our services include logo design, promotional materials, social media campaigns, event signage, and more. With our expertise in marketing and branding, we'll help you create a lasting impression and ensure that your event is well-recognized and attended by your target audience.",
+    "image": "https://i.ibb.co/tQ9YQww/marketing2.jpg"
+  }
+]

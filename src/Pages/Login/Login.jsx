@@ -7,7 +7,7 @@ import { BiLowVision, BiShowAlt } from "react-icons/bi";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import SweetAlert2 from "react-sweetalert2";
-import Swal from "sweetalert2"; 
+import Swal from "sweetalert2";
 
 
 
@@ -18,7 +18,7 @@ const Login = () => {
     const [loginError, setLoginError] = useState('');
 
 
-    const { signInUser } = useContext(AuthContext);
+    const { signInUser, signInWithGoogle } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -38,14 +38,33 @@ const Login = () => {
                     icon: 'success',
                     title: 'Successfully Logged In',
                     showConfirmButton: false,
-                    timer: 2500
-                  })
+                    timer: 4000
+                })
                 // navigate user
-                navigate(location?.state ? location.state : '/')
+                setTimeout(()=> {
+                    navigate(location?.state ? location.state : '/')
+                },2000)
             })
             .catch(() => {
                 setLoginError("Invalid User. Please Check Email or Password Again")
             })
+    };
+
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+        .then(()=> {
+            Swal.fire({
+                position: 'top-center',
+                icon: 'success',
+                title: 'Successfully Logged In',
+                showConfirmButton: false,
+                timer: 4000
+            })
+            // navigate user
+            setTimeout(()=> {
+                navigate(location?.state ? location.state : '/')
+            },2000)
+        })
     }
 
 
@@ -95,7 +114,7 @@ const Login = () => {
                         </div>
 
                         <div className="flex flex-col lg:flex-row justify-between mb-10 space-y-6 lg:space-y-0">
-                            <button className="btn btn-outline rounded-none bg-transparent hover:rounded-none capitalize lg:border-l-0 lg:border-b-0">
+                            <button onClick={handleGoogleSignIn} className="btn btn-outline rounded-none bg-transparent hover:rounded-none capitalize lg:border-l-0 lg:border-b-0">
                                 <FcGoogle></FcGoogle>
                                 Login with Google
                             </button>

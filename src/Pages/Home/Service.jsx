@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { IoArrowUndoOutline } from "react-icons/io5";
 import './service.css'
+import { Link } from "react-router-dom";
 
 
 const Service = ({service}) => {
@@ -16,13 +17,15 @@ const Service = ({service}) => {
                         <h2 className="card-title text-2xl mb-6 text-white font-semibold">{title}</h2>
                         </div>
                         <div className="h-20 mb-4">
-                        <p className="">{description}</p>
+                        {
+                            description.length > 100 ? <p>{description.slice(0,100)}....</p> : <p>{description}</p>
+                        }
                         </div>
                         <div className="h-10">
                         <p className="text-3xl ">$ {price}</p>
                         </div>
                         <div className="card-actions justify-end items-center ">
-                            <button className="bg-[#363535] text-white rounded-none w-32 h-10 hover:scale-110 transition-transform">View Details</button>
+                            <Link to={`/servicedetails/${id}`}><button className="bg-gradient-to-r from-gray-600 to-gray-950 text-white rounded-none w-32 h-10 hover:scale-110 transition-transform">View Details</button></Link>
                             <IoArrowUndoOutline className=""></IoArrowUndoOutline>
                             
                         </div>

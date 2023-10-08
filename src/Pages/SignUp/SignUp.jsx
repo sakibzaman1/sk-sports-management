@@ -57,6 +57,10 @@ const SignUp = () => {
             setRegisterError("Your Password should  have at least one uppercase character")
             return;
         }
+        else if(!/[^A-Za-z0-9]/.test(password)) {
+            setRegisterError("Your Password must have one spceial character")
+            return;
+        }
 
         // create User
 
@@ -75,7 +79,9 @@ const SignUp = () => {
                             timer: 2500
                           })
                         //   navigate user
-                        navigate('/');
+                        setTimeout(()=> {
+                            navigate('/')
+                        },2000)
                     })
                     .catch()
                     
@@ -106,7 +112,7 @@ const SignUp = () => {
                         <Navbar></Navbar>
                     </div>
 
-                    <form onSubmit={handleSignUp} className="mx-auto  w-[95%] lg:w-3/5 bg-white p-8 lg:p-20 mt-20 space-y-6 mb-40 lg:rounded-none rounded-3xl">
+                    <form onSubmit={handleSignUp} className="mx-auto  w-[95%] lg:w-3/5 bg-white p-8 lg:p-20 mt-20 space-y-6 mb-40 lg:rounded-none rounded-3xl border-transparent">
                         <h2 className="text-center text-3xl font-semibold mb-10">Please Sign Up</h2> <hr className="mb-6" />
 
                         <div className="form-control">

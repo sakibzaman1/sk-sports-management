@@ -28,7 +28,7 @@
 
 .navLinks:hover::before,
 .navLinks:hover::after {
-    width: 120%; 
+    width: 100%; 
 }
 
 

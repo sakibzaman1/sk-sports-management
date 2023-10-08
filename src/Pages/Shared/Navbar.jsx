@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import SweetAlert2 from "react-sweetalert2";
 import Swal from "sweetalert2"; 
-
+import { BiUserCheck, BiLogOutCircle, BiLogInCircle } from "react-icons/bi";
 
 
 const Navbar = () => {
@@ -38,8 +38,8 @@ const Navbar = () => {
 
     return (
         <div className="mt-6">
-            <div className="navbar font-openSans gap-56 lg:gap-36 text-white">
-                <div className="navbar-start">
+            <div className={`navbar font-openSans gap-56 ${user? 'lg:gap-24' : 'lg:gap-48'} text-white`}>
+                <div className="navbar-start ">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -57,8 +57,6 @@ const Navbar = () => {
                                     <li><a>Submenu 2</a></li>
                                 </ul>
                             </li>
-                            <li><NavLink to="/others">News</NavLink></li>
-                            <li><NavLink to="/others">Media</NavLink></li>
                             <li><NavLink to="/others">About</NavLink></li>
                             <li><NavLink to="/others">Contact</NavLink></li>
                         </ul>
@@ -81,16 +79,17 @@ const Navbar = () => {
                                 </ul>
                             </details>
                         </li>
-                        <li className="navLinks"><NavLink to="/others">News</NavLink></li>
-                        <li className="navLinks"><NavLink to="/others">Media</NavLink></li>
                         <li className="navLinks"><NavLink to="/others">About</NavLink></li>
                         <li className="navLinks"><NavLink to="/others">Contact</NavLink></li>
+                        <li className="navLinks"><NavLink to="/others">{
+                            user? <div className="flex items-center gap-2"><BiUserCheck size={20}></BiUserCheck>{user.displayName}</div> : ""
+                        }</NavLink></li>
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <div className="flex justify-between items-center">
+                <div className="navbar-end w-2/6 items-center">
+                    <div className="flex  justify-between items-center">
                         <div className="avatar">
-                            <div className="w-8 rounded-full">
+                            <div className="w-8 rounded-full  ring ring-offset-green-600 ring-offset-2">
                                 <img src={
 
                                     user ? user.photoURL :
@@ -98,13 +97,19 @@ const Navbar = () => {
                                         defaultUserLogo} />
                             </div>
                         </div>
-                        <div>
+                        <div className="ml-2">
                             {
                                 user ?
 
-                                    <Link><button onClick={handleSignOut} className=" rounded-sm w-20 hover:scale-110  bg-transparent  text-white font-semibold hover:text-white py-2  border-none border-[#403F3F] hover:border-transparent  transition duration-300 ease-in-out">Logout</button></Link> :
+                                    <div className="flex items-center">
+                                        <Link><button onClick={handleSignOut} className=" rounded-sm w-20 hover:scale-110  bg-transparent  text-white font-semibold hover:text-white py-2  border-none border-[#403F3F] hover:border-transparent  transition duration-300 ease-in-out">Logout</button></Link>
+                                        <BiLogInCircle></BiLogInCircle>
+                                    </div> :
 
-                                    <Link to="/login"><button className=" rounded-sm w-20 hover:scale-110  bg-transparent  text-white font-semibold hover:text-white py-2  border-none border-[#403F3F] hover:border-transparent  transition duration-300 ease-in-out">Login</button></Link>
+                                    <div className="flex items-center"> 
+                                        <Link to="/login"><button className=" rounded-sm w-20 hover:scale-110  bg-transparent  text-white font-semibold hover:text-white py-2  border-none border-[#403F3F] hover:border-transparent  transition duration-300 ease-in-out">Login</button></Link>
+                                        <BiLogOutCircle></BiLogOutCircle>
+                                    </div>
                             }
                         </div>
                     </div>
