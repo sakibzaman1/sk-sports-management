@@ -110,7 +110,7 @@ const Login = () => {
                         </div>
 
                         <div className="form-control mt-6 pt-10 pb-10">
-                            <button className="w-full bg-[#403F3F] text-white h-14 hover:scale-110 transition-transform">Login</button>
+                            <button className="w-full bg-gradient-to-r from-gray-600 to-gray-950 text-white h-14 hover:scale-110 transition-transform font-semibold">Login</button>
                         </div>
 
                         <div className="flex flex-col lg:flex-row justify-between mb-10 space-y-6 lg:space-y-0">

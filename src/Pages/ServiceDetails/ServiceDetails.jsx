@@ -3,8 +3,7 @@ import { Link, useLoaderData, useParams } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import defaultUserLogo from '../../assets/user.png'
-import SweetAlert2 from "react-sweetalert2";
-import Swal from "sweetalert2"; 
+
 import { TiArrowBackOutline } from "react-icons/ti";
 
 
@@ -24,21 +23,6 @@ const ServiceDetails = () => {
     const handleSignOut = () => {
         signOutUser()
             .then(() => {
-                Swal.fire({
-                    title: '<strong>Logged Out</strong>',
-                    icon: 'info',
-                    html:
-                      'How Was Your Experience?',
-                    showCloseButton: true,
-                    showCancelButton: true,
-                    focusConfirm: false,
-                    confirmButtonText:
-                      '<i class="fa fa-thumbs-up"></i> Great!',
-                    confirmButtonAriaLabel: 'Thumbs up, great!',
-                    cancelButtonText:
-                      '<i class="fa fa-thumbs-down"></i> Not Good',
-                    cancelButtonAriaLabel: 'Thumbs down'
-                  })
             })
             .catch(error => console.log(error.message))
     }
@@ -97,7 +81,7 @@ const ServiceDetails = () => {
                     </div>
                 </div>
             </div>
-            <SweetAlert2></SweetAlert2>
+            
         </div>
     );
 };

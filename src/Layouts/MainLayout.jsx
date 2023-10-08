@@ -9,7 +9,7 @@ const MainLayout = () => {
             <section className="max-w-7xl mx-auto">
                 <Outlet></Outlet>
             </section>
-            <section>
+            <section className="mt-20">
                 <Footer></Footer>
             </section>
         </div>

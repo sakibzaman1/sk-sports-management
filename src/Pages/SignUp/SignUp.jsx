@@ -150,7 +150,7 @@ const SignUp = () => {
                             <input onChange={handleButtonDisable} type="checkbox" name="terms" id="" /> <span className="text-green-500 pl-3">Please Accept Our Terms & Conditions</span>
                         </div>
                         <div className="form-control mt-6">
-                            <button disabled={isDisabled} className="w-full bg-[#403F3F] text-white h-14 hover:scale-110 transition-transform">Submit</button>
+                            <button disabled={isDisabled} className={`w-full  font-semibold text-white h-14  ${isDisabled? "bg-gray-400" : "bg-gradient-to-r from-gray-600 to-gray-950 hover:scale-110 transition-transform"}`}>Submit</button>
                         </div>
 
                         <div className="mx-auto mb-10 w-full px-10 text-center">
