@@ -10,7 +10,7 @@ const Service = ({service}) => {
 
     return (
         <div>
-            <div className="card shadow-xl image-full h-80 hover:scale-110 transition-transform cursor-pointer font-openSans">
+            <div className="card shadow-xl image-full h-80 hover:scale-110 transition-transform cursor-pointer font-openSans" >
                     <figure className="rounded-none"><img className="" src={image} alt="Shoes" /></figure>
                     <div className="card-body">
                         <div className="h-10 mb-8">

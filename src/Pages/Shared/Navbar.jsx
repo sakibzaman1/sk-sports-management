@@ -7,7 +7,18 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { BiUserCheck, BiLogOutCircle, BiLogInCircle } from "react-icons/bi";
 import { AiOutlineUserAdd } from "react-icons/ai";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
+
 const Navbar = () => {
+
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+      }, []);
+
 
     const { user, signOutUser } = useContext(AuthContext);
 
@@ -55,7 +66,7 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu-horizontal px-1 gap-16">
                         <li className="navLinks"><NavLink to="/">Home</NavLink></li>
-                        <li className="" tabIndex={0}>
+                        <li className="navLinks" tabIndex={0}>
                             <details className="hover:cursor-pointer">
                                 <summary className=""><Link to="/services">Services</Link></summary>
                                 <ul className="p-2 text-black w-[230px] rounded-none text-center">
@@ -77,8 +88,8 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end w-2/6 items-center">
                     <div className="flex  justify-between items-center">
-                        <div className="avatar">
-                            <div className="w-8 rounded-full  ring ring-offset-green-600 ring-offset-2">
+                        <div className="avatar" >
+                            <div className="w-8 rounded-full  ring ring-offset-green-600 ring-offset-2" data-aos="fade-left" data-aos-delay="400">
                                 <img src={
 
                                     user ? user.photoURL :
