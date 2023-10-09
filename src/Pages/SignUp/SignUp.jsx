@@ -63,11 +63,11 @@ const SignUp = () => {
             return;
         }
         else if (!/[A-Z]/.test(password)) {
-            setRegisterError("Your Password should  have at least one uppercase character")
+            setRegisterError("Your Password should have at least one uppercase character")
             return;
         }
         else if(!/[^A-Za-z0-9]/.test(password)) {
-            setRegisterError("Your Password must have one spceial character")
+            setRegisterError("Your Password must have one special character")
             return;
         }
 
@@ -83,7 +83,7 @@ const SignUp = () => {
                         Swal.fire({
                             position: 'top-center',
                             icon: 'success',
-                            title: 'Registration Successfull',
+                            title: 'Registration Successful',
                             showConfirmButton: false,
                             timer: 2500
                           })

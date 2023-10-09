@@ -41,7 +41,7 @@ const Profile = () => {
                                     </figure>
                                 </div>
                                 <div className="text-center lg:text-start">
-                                    <h1 className="text-2xl font-bold text-black">{user.displayName}</h1>
+                                    <h1 className="text-2xl font-bold text-stone-900">{user.displayName}</h1>
                                     <p className="py-6 text-stone-800 font-semibold">{user.email}</p>
                                     <div className="flex gap-4 items-center justify-center lg:justify-start">
                                         <Link to="/"><button className="rounded-sm w-40 h-full hover:scale-110  bg-gradient-to-r from-gray-600 to-gray-950 hover:bg-[#403F3F] text-white font-semibold hover:text-white py-2  border-2 border-none hover:border-transparent  transition duration-300 ease-in-out">Go Back to Home</button></Link> <TiArrowBackOutline size={40}></TiArrowBackOutline>

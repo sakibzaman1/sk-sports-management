@@ -90,7 +90,7 @@ const AltNavbar = () => {
                 <div className="navbar-end w-2/6 items-center">
                     <div className="flex  justify-between items-center">
                         <div className="avatar" >
-                            <div className="w-8 rounded-full  ring ring-offset-green-600 ring-offset-2" data-aos="fade-down" data-aos-delay="400">
+                            <div className="w-8 rounded-full  ring ring-offset-green-100 ring-offset-0" data-aos="fade-down" data-aos-delay="400">
                                 <img src={
 
                                     user ? user.photoURL :
