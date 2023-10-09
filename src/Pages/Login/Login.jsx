@@ -9,13 +9,20 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import SweetAlert2 from "react-sweetalert2";
 import Swal from "sweetalert2";
 
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 
 const Login = () => {
 
     const [showPassword, setShowPassword] = useState(false);
     const [loginError, setLoginError] = useState('');
+
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+      }, []);
 
 
     const { signInUser, signInWithGoogle } = useContext(AuthContext);
@@ -27,7 +34,6 @@ const Login = () => {
         const form = new FormData(e.currentTarget);
         const email = form.get("email");
         const password = form.get("password");
-        console.log(email, password);
 
         setLoginError('');
 
@@ -65,6 +71,9 @@ const Login = () => {
                 navigate(location?.state ? location.state : '/')
             },2000)
         })
+        .catch((error) => {
+            setLoginError(error.message)
+        })
     }
 
 
@@ -80,8 +89,8 @@ const Login = () => {
                         <Navbar></Navbar>
                     </div>
 
-                    <form onSubmit={handeLogin} className="mx-auto w-[95%] lg:w-3/5 bg-white p-8 lg:p-20 mt-20 space-y-6 mb-40 lg:rounded-none rounded-3xl">
-                        <h2 className="text-center text-3xl font-semibold mb-10">Please Login</h2> <hr className="mb-6" />
+                    <form onSubmit={handeLogin} className="mx-auto w-[95%] lg:w-3/5 bg-white bg-opacity-10 p-8 lg:p-20 mt-20 space-y-6 mb-40 lg:rounded-none rounded-3xl" data-aos="fade-up" data-aos-delay="400">
+                        <h2 className="text-center text-3xl font-semibold mb-10 text-black">Please Login</h2> <hr className="mb-6" />
 
                         <div className="form-control">
                             <label className="label mb-4">
@@ -114,7 +123,7 @@ const Login = () => {
                         </div>
 
                         <div className="flex flex-col lg:flex-row justify-between mb-10 space-y-6 lg:space-y-0">
-                            <button onClick={handleGoogleSignIn} className="btn btn-outline rounded-none bg-transparent hover:rounded-none capitalize lg:border-l-0 lg:border-b-0">
+                            <button onClick={handleGoogleSignIn} className="text-black btn btn-outline rounded-none bg-transparent hover:rounded-none capitalize lg:border-l-0 lg:border-b-0">
                                 <FcGoogle></FcGoogle>
                                 Login with Google
                             </button>
@@ -129,7 +138,7 @@ const Login = () => {
                         </div>
 
                         <div className="text-center pt-10">
-                            <small className="font-medium">New to this Website? Please <Link to="/signup" className="text-green-500 ml-2">Sign Up</Link></small>
+                            <small className="font-medium text-black">New to this Website? Please <Link to="/signup" className="text-red-700 ml-2">Sign Up</Link></small>
                         </div>
                     </form>
 

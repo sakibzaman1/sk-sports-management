@@ -22,8 +22,8 @@ const Home = () => {
     return (
         <div className="font-openSans">
             <Header></Header>
-            <h2 className="text-5xl text-center mb-10 font-semibold mt-20">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 md:gap-6 lg:gap-16 p-10 space-y-10 lg:space-y-0" data-aos="fade-up">
+            <div  data-aos="fade-down" data-aos-delay="200"><h2 className="text-5xl text-center mb-10 font-semibold mt-20">Our Services</h2></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 md:gap-6 lg:gap-16 p-10 space-y-10 lg:space-y-0">
 
                 {
                     services.map(service => <Service key={service.id} service={service}></Service>)
@@ -31,11 +31,11 @@ const Home = () => {
 
 
             </div>
-            <div data-aos="fade-right">
+            <div data-aos="fade-up" data-aos-delay="400">
                 <h1 className="text-5xl text-center mb-20 font-semibold mt-20">Gallery</h1>
                 <Gallery></Gallery>
             </div>
-            <div className="" data-aos="fade-up">
+            <div className="" data-aos="fade-down" data-aos-delay="400">
                 <h1 className="text-5xl text-center mb-20 font-semibold mt-20">Stats</h1>
                 <Stats></Stats>
             </div>

@@ -1,8 +1,9 @@
-import { Link, NavLink } from "react-router-dom";
-import "./navbar.css";
-import defaultUserLogo from '../../assets/user.png'
+import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import "../../Shared//navbar.css";
+import defaultUserLogo from '../../../assets/user.png'
 import { useContext } from "react";
-import { AuthContext } from "../../Providers/AuthProvider";
+
 
 import { BiUserCheck, BiLogOutCircle, BiLogInCircle } from "react-icons/bi";
 import { AiOutlineUserAdd } from "react-icons/ai";
@@ -10,14 +11,14 @@ import { AiOutlineUserAdd } from "react-icons/ai";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { AuthContext } from "../../../Providers/AuthProvider";
 
 
-const Navbar = () => {
-
+const AltNavbar = () => {
     useEffect(() => {
         AOS.init();
         AOS.refresh();
-      }, []);
+    }, []);
 
 
     const { user, signOutUser } = useContext(AuthContext);
@@ -32,18 +33,18 @@ const Navbar = () => {
     }
 
     return (
-        <div className="mt-6">
-            <div className={`navbar font-openSans gap-56 ${user ? 'lg:gap-24' : 'lg:gap-48'} text-white`}>
+        <div className="mt-6 bg-base-200">
+            <div className={`navbar font-openSans gap-56 ${user ? 'lg:gap-24' : 'lg:gap-48'} text-green-600`}>
                 <div className="navbar-start ">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li className="text-black"><NavLink to="/">Home</NavLink></li>
+                            <li><NavLink to="/">Home</NavLink></li>
                             <li className="" tabIndex={0}>
                                 <details className="hover:cursor-pointer">
-                                    <summary className="text-black"><Link to="/services">Services</Link></summary>
+                                    <summary className=""><Link to="/services">Services</Link></summary>
                                     <ul className="p-2 text-black">
                                         <li><a>Event Planning</a></li>
                                         <li><a>Venue Selection</a></li>
@@ -54,10 +55,10 @@ const Navbar = () => {
                                     </ul>
                                 </details>
                             </li>
-                            <li className="text-black"><NavLink to="/about">About</NavLink></li>
-                            <li className="text-black"><NavLink to="/contact">Contact</NavLink></li>
+                            <li className=""><NavLink to="/about">About</NavLink></li>
+                            <li className=""><NavLink to="/contact">Contact</NavLink></li>
                             <li className="navLinks"><NavLink to="/profile">{
-                                user ? <div className="text-black">{user.displayName}</div> : "Profile"
+                                user ? <div className="">{user.displayName}</div> : "Profile"
                             }</NavLink></li>
                         </ul>
                     </div>
@@ -102,12 +103,12 @@ const Navbar = () => {
                                 user ?
 
                                     <div className="flex items-center">
-                                        <Link><button onClick={handleSignOut} className=" rounded-sm w-20 hover:scale-110  bg-transparent  text-white font-semibold hover:text-white py-2  border-none border-[#403F3F] hover:border-transparent  transition duration-300 ease-in-out">Logout</button></Link>
+                                        <Link><button onClick={handleSignOut} className=" rounded-sm w-20 hover:scale-110  bg-transparent  text-black font-semibold hover:text-black py-2  border-none border-[#403F3F] hover:border-transparent  transition duration-300 ease-in-out">Logout</button></Link>
                                         <div className="hidden lg:flex"><BiLogInCircle></BiLogInCircle></div>
                                     </div> :
 
                                     <div className="flex items-center">
-                                        <Link to="/login"><button className=" rounded-sm w-20 hover:scale-110  bg-transparent  text-white font-semibold hover:text-white py-2  border-none border-[#403F3F] hover:border-transparent  transition duration-300 ease-in-out">Login</button></Link>
+                                        <Link to="/login"><button className=" rounded-sm w-20 hover:scale-110  bg-transparent  text-black font-semibold hover:text-black py-2  border-none border-[#403F3F] hover:border-transparent  transition duration-300 ease-in-out">Login</button></Link>
                                         <div className="hidden lg:flex"><BiLogOutCircle></BiLogOutCircle></div>
                                     </div>
                             }
@@ -115,9 +116,9 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            
+
         </div>
     );
 };
 
-export default Navbar;
+export default AltNavbar;

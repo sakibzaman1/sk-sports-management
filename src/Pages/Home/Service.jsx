@@ -3,13 +3,23 @@ import { IoArrowUndoOutline } from "react-icons/io5";
 import './service.css'
 import { Link } from "react-router-dom";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 
 const Service = ({service}) => {
+
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+      }, []);
+
 
     const { id, title, price, description, image } = service;
 
     return (
-        <div>
+        <div data-aos="fade-down" data-aos-delay="300">
             <div className="card shadow-xl image-full h-80 hover:scale-110 transition-transform cursor-pointer font-openSans" >
                     <figure className="rounded-none"><img className="" src={image} alt="Shoes" /></figure>
                     <div className="card-body">

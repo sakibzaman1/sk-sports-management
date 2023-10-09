@@ -112,8 +112,8 @@ const SignUp = () => {
                         <Navbar></Navbar>
                     </div>
 
-                    <form onSubmit={handleSignUp} className="mx-auto  w-[95%] lg:w-3/5 bg-white p-8 lg:p-20 mt-20 space-y-6 mb-40 lg:rounded-none rounded-3xl border-transparent">
-                        <h2 className="text-center text-3xl font-semibold mb-10">Please Sign Up</h2> <hr className="mb-6" />
+                    <form onSubmit={handleSignUp} className="mx-auto  w-[95%] lg:w-3/5 bg-white bg-opacity-10 p-8 lg:p-20 mt-20 space-y-6 mb-40 lg:rounded-none rounded-3xl border-transparent">
+                        <h2 className="text-center text-3xl font-semibold mb-10 text-black">Please Sign Up</h2> <hr className="mb-6" />
 
                         <div className="form-control">
                             <label className="label mb-4">
@@ -147,23 +147,23 @@ const SignUp = () => {
                             </div>
                         </div>
                         <div className="py-6">
-                            <input onChange={handleButtonDisable} type="checkbox" name="terms" id="" /> <span className="text-green-500 pl-3">Please Accept Our Terms & Conditions</span>
+                            <input onChange={handleButtonDisable} type="checkbox" name="terms" id=""  required/> { isDisabled? <span className="text-red-900 pl-3 font-semibold">Please Accept Our Terms & Conditions*</span> : <span className="text-green-900 pl-3 font-semibold">Terms & Conditions Accepted</span>}
                         </div>
                         <div className="form-control mt-6">
-                            <button disabled={isDisabled} className={`w-full  font-semibold text-white h-14  ${isDisabled? "bg-gray-400" : "bg-gradient-to-r from-gray-600 to-gray-950 hover:scale-110 transition-transform"}`}>Submit</button>
+                            <button disabled={isDisabled} className={`w-full  font-semibold text-white h-14  ${isDisabled? "bg-gray-600" : "bg-gradient-to-r from-gray-600 to-gray-950 hover:scale-110 transition-transform"}`}>Submit</button>
                         </div>
 
                         <div className="mx-auto mb-10 w-full px-10 text-center">
                             {
-                                registerError && <p className="text-red-600 italic">{registerError}</p>
+                                registerError && <p className="text-red-900 italic font-semibold">{registerError}</p>
                             }
                             {
-                                registrationSuccess && <p className="text-green-600">{registrationSuccess}</p>
+                                registrationSuccess && <p className="text-green-900">{registrationSuccess}</p>
                             }
                         </div>
 
                         <div className="text-center pt-10">
-                            <small className="font-medium">Already Have an Account? Please <Link to="/login" className="text-blue-500 ml-2">Login</Link></small>
+                            <small className="font-medium text-black">Already Have an Account?  Please<Link to="/login" className="text-green-900 ml-2 font-bold">Login</Link></small>
                         </div>
 
 
