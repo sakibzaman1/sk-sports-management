@@ -11,7 +11,7 @@ const Contact = () => {
                 <AltNavbar></AltNavbar>
             </div> <hr className="mt-10" />
 
-            <div className="">
+            <div className="lg:pt-20 pt-0">
                 <h1 className="text-center text-7xl my-20">
                     Contact Us via Email or WhatsApp
                 </h1>

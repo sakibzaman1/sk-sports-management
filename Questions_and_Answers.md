@@ -18,9 +18,9 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A
 
-<i>Write your explanation here</i>
+<i>The output of {} being logged as {} in the console is because console.log() is a JavaScript function that outputs the value or object we provide as it's argument to the console for debugging and inspection. In this case, the argument we provided is an empty object created by {}.</i>
 
 </p>
 </details>
@@ -43,9 +43,9 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C
 
-<i>Write your explanation here</i>
+<i>Here, 1 is a number, and "2" is a string. When we use the + operator with a number and a string, JavaScript performs string concatenation. In this case, it converts the number 1 to a string and then concatenates it with the string "2", resulting in the string "12".</i>
 
 </p>
 </details>
@@ -69,9 +69,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A
 
-<i>Write your explanation here</i>
+<i>Changing the info.favoriteFood property to "🍝" does not alter the food array in any way.The food array remains unchanged throughout this code. Modifying the info.favoriteFood property does not affect the food array. Therefore, when we log the food array, it will still contain the original values resulting : `['🍕', '🍫', '🥑', '🍔']`</i>
 
 </p>
 </details>
@@ -94,9 +94,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B
 
-<i>Write your explanation here</i>
+<i>We've defined a function sayHi that takes a name parameter and returns a string with a greeting. However, when we call sayHi() without providing any arguments, we will encounter an issue because we didn't provide a default value for the name parameter. Resulting `Hi there, undefined` </i>
 
 </p>
 </details>
@@ -122,9 +122,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C
 
-<i>Write your explanation here</i>
+<i>The forEach method here iterates over each element of the nums array and increments the count for each truthy element, because there's an if statement that checks if the current num is truthy. After the loop finishes, count will have the value 3 because it was incremented for the truthy values 1, 2, and 3, and it wasn't incremented for the falsy value 0. Hence, when we log count, we get 3.</i>
 
 </p>
 </details>

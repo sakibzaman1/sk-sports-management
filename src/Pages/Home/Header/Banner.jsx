@@ -8,7 +8,7 @@ const Banner = () => {
             <div className="hero-overlay bg-opacity-20"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="">
-                    <h1 className="mb-10 text-3xl lg:text-7xl font-bold mt-20">Your Game<span className="text-stone-800"> Our </span>Expertise </h1>
+                    <h1 className="mb-10 text-5xl lg:text-7xl text-stone-800 lg:text-white font-bold mt-20">Your <span className="lg:text-white text-white italic lg:not-italic">Game</span><span className="text-stone-800"> Our </span>Expertise </h1>
                     
                     <div className="flex justify-center gap-4 items-center">
                     <IoArrowRedo size={40} color="black"></IoArrowRedo>

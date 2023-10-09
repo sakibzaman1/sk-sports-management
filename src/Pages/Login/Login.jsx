@@ -114,7 +114,7 @@ const Login = () => {
 
                         <div className="mx-auto mb-4 pt-4  w-full px-10 text-center">
                             {
-                                loginError && <p className="text-red-600 italic">{loginError}</p>
+                                loginError && <p className="text-rose-800 italic text-bold">{loginError}</p>
                             }
                         </div>
 
