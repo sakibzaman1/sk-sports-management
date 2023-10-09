@@ -11,7 +11,7 @@ const About = () => {
             </div> <hr className="mt-10" />
 
 
-            <div className="p-20 text-black space-y-8">
+            <div className="p-10 lg:p-20 text-black space-y-8">
                 <h1 className="text-3xl font-bold">About Us</h1> <hr />
                 <p>
                     Welcome to Sk Sports Event Management! We are dedicated sports enthusiasts with 4 years of experience in creating exceptional sporting events. Our mission is simple: to elevate the world of sports events and turn your sporting dreams into reality.

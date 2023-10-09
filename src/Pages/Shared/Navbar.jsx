@@ -33,7 +33,7 @@ const Navbar = () => {
 
     return (
         <div className="mt-6">
-            <div className={`navbar font-openSans gap-56 ${user ? 'lg:gap-24' : 'lg:gap-48'} text-white`}>
+            <div className={`navbar font-openSans gap-56 ${user ? 'lg:gap-24' : 'lg:gap-40'} text-white`}>
                 <div className="navbar-start ">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -43,7 +43,7 @@ const Navbar = () => {
                             <li className="text-black"><NavLink to="/">Home</NavLink></li>
                             <li className="" tabIndex={0}>
                                 <details className="hover:cursor-pointer">
-                                    <summary className="text-black"><Link to="/services">Services</Link></summary>
+                                    <summary className="text-black"><NavLink to="/services">Services</NavLink></summary>
                                     <ul className="p-2 text-black">
                                         <li><a>Event Planning</a></li>
                                         <li><a>Venue Selection</a></li>
@@ -56,7 +56,7 @@ const Navbar = () => {
                             </li>
                             <li className="text-black"><NavLink to="/about">About</NavLink></li>
                             <li className="text-black"><NavLink to="/contact">Contact</NavLink></li>
-                            <li className="navLinks"><NavLink to="/profile">{
+                            <li className="navLinks text-black"><NavLink to="/profile">{
                                 user ? <div className="text-black">{user.displayName}</div> : "Profile"
                             }</NavLink></li>
                         </ul>
@@ -68,7 +68,7 @@ const Navbar = () => {
                         <li className="navLinks"><NavLink to="/">Home</NavLink></li>
                         <li className="navLinks" tabIndex={0}>
                             <details className="hover:cursor-pointer">
-                                <summary className=""><Link to="/services">Services</Link></summary>
+                                <summary className=""><NavLink to="/services">Services</NavLink></summary>
                                 <ul className="p-2 text-black w-[230px] rounded-none text-center">
                                     <li><a>Event Planning</a></li> <hr />
                                     <li><a>Venue Selection</a></li> <hr />
@@ -89,7 +89,7 @@ const Navbar = () => {
                 <div className="navbar-end w-2/6 items-center">
                     <div className="flex  justify-between items-center">
                         <div className="avatar" >
-                            <div className="w-8 rounded-full  ring ring-offset-green-600 ring-offset-2" data-aos="fade-down" data-aos-delay="400">
+                            <div className="w-8 rounded-full  ring ring-offset-green-100 ring-offset-0 " data-aos="fade-down" data-aos-delay="400">
                                 <img src={
 
                                     user ? user.photoURL :

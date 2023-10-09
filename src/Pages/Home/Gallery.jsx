@@ -2,7 +2,7 @@
 
 const Gallery = () => {
     return (
-        <div>
+        <div className="px-4 lg:px-10">
             <div className="carousel w-full">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src="https://i.ibb.co/r7mMBN2/braden-collum-9-HI8-UJMSd-ZA-unsplash.jpg" className="w-full" />

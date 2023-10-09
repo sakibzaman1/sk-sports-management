@@ -44,7 +44,7 @@ const Login = () => {
                     icon: 'success',
                     title: 'Successfully Logged In',
                     showConfirmButton: false,
-                    timer: 4000
+                    timer: 2000
                 })
                 // navigate user
                 setTimeout(()=> {
@@ -64,7 +64,7 @@ const Login = () => {
                 icon: 'success',
                 title: 'Successfully Logged In',
                 showConfirmButton: false,
-                timer: 4000
+                timer: 2000
             })
             // navigate user
             setTimeout(()=> {
@@ -89,7 +89,7 @@ const Login = () => {
                         <Navbar></Navbar>
                     </div>
 
-                    <form onSubmit={handeLogin} className="mx-auto w-[95%] lg:w-3/5 bg-white bg-opacity-10 p-8 lg:p-20 mt-20 space-y-6 mb-40 lg:rounded-none rounded-3xl" data-aos="fade-up" data-aos-delay="400">
+                    <form onSubmit={handeLogin} className="mx-auto w-[90%] lg:w-3/5 bg-white bg-opacity-10 p-8 lg:p-20 mt-20 space-y-6 mb-40 lg:rounded-none rounded-3xl" data-aos="fade-up" data-aos-delay="400">
                         <h2 className="text-center text-3xl font-semibold mb-10 text-black">Please Login</h2> <hr className="mb-6" />
 
                         <div className="form-control">

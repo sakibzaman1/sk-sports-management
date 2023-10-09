@@ -2,7 +2,7 @@
 
 const Stats = () => {
     return (
-        <div className="flex mx-auto">
+        <div className="flex mx-auto px-4 lg:px-10">
             <div className="stats shadow flex mx-auto w-full">
 
                 <div className="stat">

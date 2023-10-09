@@ -4,10 +4,21 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { Link } from "react-router-dom";
 import { TiArrowBackOutline } from "react-icons/ti";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
+
 
 const Profile = () => {
 
     const { user } = useContext(AuthContext);
+
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+      }, []);
+
 
     return (
         <div className="font-openSans">
@@ -23,14 +34,14 @@ const Profile = () => {
 
                     <div>
                         <div className="hero min-h-screen">
-                            <div className="hero-content flex-col lg:flex-row-reverse justify-around">
-                                <div className="card w-96">
+                            <div className="hero-content flex-col lg:flex-row-reverse justify-around"  data-aos="fade-up" data-aos-delay="400">
+                                <div className="card w-64 lg:w-96">
                                     <figure className="px-10 pt-10">
                                         <img src={user.photoURL} alt="Shoes" className="rounded-full" />
                                     </figure>
                                 </div>
                                 <div className="text-center lg:text-start">
-                                    <h1 className="text-5xl font-bold text-black">{user.displayName}</h1>
+                                    <h1 className="text-2xl font-bold text-black">{user.displayName}</h1>
                                     <p className="py-6 text-stone-800 font-semibold">{user.email}</p>
                                     <div className="flex gap-4 items-center justify-center lg:justify-start">
                                         <Link to="/"><button className="rounded-sm w-40 h-full hover:scale-110  bg-gradient-to-r from-gray-600 to-gray-950 hover:bg-[#403F3F] text-white font-semibold hover:text-white py-2  border-2 border-none hover:border-transparent  transition duration-300 ease-in-out">Go Back to Home</button></Link> <TiArrowBackOutline size={40}></TiArrowBackOutline>

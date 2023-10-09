@@ -34,7 +34,7 @@ const AltNavbar = () => {
 
     return (
         <div className="mt-6 bg-base-200">
-            <div className={`navbar font-openSans gap-56 ${user ? 'lg:gap-24' : 'lg:gap-48'} text-green-600`}>
+            <div className={`navbar font-openSans gap-56 ${user ? 'lg:gap-24' : 'lg:gap-40'} text-green-600`}>
                 <div className="navbar-start ">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -44,7 +44,7 @@ const AltNavbar = () => {
                             <li><NavLink to="/">Home</NavLink></li>
                             <li className="" tabIndex={0}>
                                 <details className="hover:cursor-pointer">
-                                    <summary className=""><Link to="/services">Services</Link></summary>
+                                    <summary className=""><NavLink to="/services">Services</NavLink></summary>
                                     <ul className="p-2 text-black">
                                         <li><a>Event Planning</a></li>
                                         <li><a>Venue Selection</a></li>
@@ -69,7 +69,7 @@ const AltNavbar = () => {
                         <li className="navLinks"><NavLink to="/">Home</NavLink></li>
                         <li className="navLinks" tabIndex={0}>
                             <details className="hover:cursor-pointer">
-                                <summary className=""><Link to="/services">Services</Link></summary>
+                                <summary className=""><NavLink to="/services">Services</NavLink></summary>
                                 <ul className="p-2 text-black w-[230px] rounded-none text-center">
                                     <li><a>Event Planning</a></li> <hr />
                                     <li><a>Venue Selection</a></li> <hr />

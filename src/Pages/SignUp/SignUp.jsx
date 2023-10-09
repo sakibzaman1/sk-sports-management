@@ -7,6 +7,9 @@ import Swal from "sweetalert2";
 import SweetAlert2 from "react-sweetalert2";
 
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 
 
@@ -20,6 +23,12 @@ const SignUp = () => {
     const [registrationSuccess, setRegistrationSuccess] = useState('');
 
     const navigate = useNavigate();
+
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+      }, []);
+
 
     // set button disabled
 
@@ -112,7 +121,7 @@ const SignUp = () => {
                         <Navbar></Navbar>
                     </div>
 
-                    <form onSubmit={handleSignUp} className="mx-auto  w-[95%] lg:w-3/5 bg-white bg-opacity-10 p-8 lg:p-20 mt-20 space-y-6 mb-40 lg:rounded-none rounded-3xl border-transparent">
+                    <form onSubmit={handleSignUp} className="mx-auto  w-[90%] lg:w-3/5 bg-white bg-opacity-10 p-8 lg:p-20 mt-20 space-y-6 mb-40 lg:rounded-none rounded-3xl border-transparent" data-aos="fade-up" data-aos-delay="400">
                         <h2 className="text-center text-3xl font-semibold mb-10 text-black">Please Sign Up</h2> <hr className="mb-6" />
 
                         <div className="form-control">
