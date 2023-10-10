@@ -3,7 +3,7 @@
 An Event Management Website for Handling Sports Event for This Particular Organization.
 
 
-##### Live Site Link : [ SK Sports Event Management ](https://sk-sports-4a800.web.app/)
+##### Live Site Link : [ SK Sports Event Management ](https://sk-sports-sakib.netlify.app/)
 
 ## Key Features 
 
